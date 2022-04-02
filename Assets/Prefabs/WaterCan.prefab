@@ -4903,3 +4903,6 @@ MonoBehaviour:
   particleSystem: {fileID: 7523964998180656992}
   WaterReserve: 40
   WaterPerSecond: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 19

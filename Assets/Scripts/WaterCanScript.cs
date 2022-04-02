@@ -8,6 +8,7 @@ public class WaterCanScript : MonoBehaviour
     public GameObject particleSystem;
     public float WaterReserve = 40;
     public float WaterPerSecond = 5;
+    public LayerMask layerMask;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class WaterCanScript : MonoBehaviour
 
         particleSystem.SetActive(true);
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up,Mathf.Infinity,layerMask);
 
         // If it hits something...
         if (hit.collider != null)
