@@ -206,6 +206,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1393806962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9066454808185966081, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+  m_PrefabInstance: {fileID: 3192998730868525407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2640601766831020698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,6 +281,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1429952066918974746, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_Name
+      value: PlantWaterBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135559435561479486, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135559435561479486, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3192998730226529568, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -318,6 +341,74 @@ PrefabInstance:
       propertyPath: m_Name
       value: PottedPlant
       objectReference: {fileID: 0}
+    - target: {fileID: 3192998730226529759, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: WaterBar
+      value: 
+      objectReference: {fileID: 1393806962}
+    - target: {fileID: 3192998730226529759, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: WaterMaxLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067529116636034159, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247236231006923301, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247236231006923301, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247236231006923301, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247236231006923301, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247236231006923301, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247236231006923301, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247236231006923301, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -250.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465108546911172551, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 83663499}
+    - target: {fileID: 6465108546911172551, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465108546911172551, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465108546911172551, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066454808185966081, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066454808185966081, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_Color.g
+      value: 0.61149263
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066454808185966081, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
+      propertyPath: m_Color.r
+      value: 0.14994659
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b9d7a2fb739634d9143990cc7f9801, type: 3}
 --- !u!1001 &7523964996836209788
@@ -327,6 +418,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 796263753151925078, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 83663499}
+    - target: {fileID: 796263753151925078, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 796263753151925078, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7523964998180656992, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -335,6 +438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterCan
       objectReference: {fileID: 0}
+    - target: {fileID: 7523964998504863106, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: WaterBar
+      value: 
+      objectReference: {fileID: 7523964996836209789}
     - target: {fileID: 7523964998504863356, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -379,5 +486,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8188533317134162639, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188533317134162639, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707196471504769861, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707196471504769861, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: bf0e428550646774ca8e45744341b1f3, type: 3}
+    - target: {fileID: 8707196471504769861, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812017387453123900, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812017387453123900, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812017387453123900, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812017387453123900, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820439415464033930, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+      propertyPath: m_Name
+      value: CanWaterBar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+--- !u!114 &7523964996836209789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8707196471504769861, guid: 6c05d183fce602045a9a92e8c4099d3f, type: 3}
+  m_PrefabInstance: {fileID: 7523964996836209788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
