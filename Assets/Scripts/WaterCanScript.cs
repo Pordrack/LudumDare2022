@@ -5,6 +5,22 @@ using UnityEngine.UI;
 
 public class WaterCanScript : MonoBehaviour
 {
+
+    private static WaterCanScript _instance;
+
+    public static WaterCanScript Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<WaterCanScript>();
+            }
+
+            return _instance;
+        }
+    }
+
     private Vector3 mousePosition;
     public GameObject particleSystem;
 
@@ -24,7 +40,7 @@ public class WaterCanScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(WaterReserve + " water left in can");
+        //Debug.Log(WaterReserve + " water left in can");
 
         //l'objet suit les mouvements de la souris
         mousePosition = Input.mousePosition;
