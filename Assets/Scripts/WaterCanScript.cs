@@ -11,10 +11,20 @@ public class WaterCanScript : MonoBehaviour
     public float WaterReserve = 40;
     public float WaterMaxReserve = 100;
     public float WaterPerSecond = 5;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 
     public Image WaterBar;
     float WaterBarY = 1f;
 
+<<<<<<< Updated upstream
+=======
+=======
+    public LayerMask layerMask;
+>>>>>>> e9ae25876912b0f44ce7a3734e14883050b29bf2
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +56,7 @@ public class WaterCanScript : MonoBehaviour
 
         particleSystem.SetActive(true);
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up,Mathf.Infinity,layerMask);
 
         // If it hits something...
         if (hit.collider != null)

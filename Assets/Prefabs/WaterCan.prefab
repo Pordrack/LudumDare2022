@@ -4905,6 +4905,10 @@ MonoBehaviour:
   WaterReserve: 40
   WaterMaxReserve: 100
   WaterPerSecond: 5
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
   WaterBar: {fileID: 0}
 --- !u!1 &8531316382796075308
 GameObject:
@@ -5081,3 +5085,11 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< Updated upstream
+=======
+=======
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 19
+>>>>>>> e9ae25876912b0f44ce7a3734e14883050b29bf2
+>>>>>>> Stashed changes
