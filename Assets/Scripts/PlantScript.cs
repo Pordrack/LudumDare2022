@@ -37,10 +37,6 @@ public class PlantScript : MonoBehaviour
         }
         //On pert de l'eau en fonction du climat
         WaterLevel -= Time.deltaTime * ClimateScript.Instance.DrynessRate;
-
-        //On ne peut pas avoir + d'eau que la valeur de WaterMaxLevel
-        if (WaterLevel > WaterMaxLevel) { WaterLevel = WaterMaxLevel; }
-
         WaterBarFiller();
 
         //On change de sprite en fonction du pourcentage d'eau restant
@@ -58,7 +54,7 @@ public class PlantScript : MonoBehaviour
 
     void WaterBarFiller() //remplissage visible de la jauge d'eau
     {
-        WaterBar.fillAmount = WaterLevel / WaterMaxLevel;     
+        WaterBar.fillAmount = WaterLevel / MaxWaterLevel;     
     }
 
     public void Die()
