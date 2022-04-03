@@ -74,10 +74,14 @@ public class FrogScript : MonoBehaviour
 
         //Sinon, c'est bon, on peut tuer la cible
         var main = particleSystem.main;
-        float time = 0; //distance / main.startSpeed.constant;
-        //StartCoroutine(target.DelayedKill(time));
-        target.Kill();
+        float time = distance / main.startSpeed.constant;
+        StartCoroutine(target.DelayedKill(time));
+        //target.Kill();
         cooldown = TimeBetweenEating;
+        //On joue aussi le petit son qui va bien
+        GetComponentInChildren<AudioSource>().Play();
+        //Et on oublie pas de se regen
+        LifeTime += LifeTimeGainedPerInsect;
         return true;
         
     }

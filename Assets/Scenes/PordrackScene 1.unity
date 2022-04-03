@@ -620,6 +620,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 839930841882864550, guid: 79fadcc7b1a6f994a845139e785aa9c7, type: 3}
+      propertyPath: TimeLeft
+      value: 61
+      objectReference: {fileID: 0}
     - target: {fileID: 839930841882864551, guid: 79fadcc7b1a6f994a845139e785aa9c7, type: 3}
       propertyPath: m_Name
       value: ChronoSystem
@@ -936,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 3314970328615433163, guid: d7940ecf3e2461e4bbc36df143230f2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314970328615433164, guid: d7940ecf3e2461e4bbc36df143230f2c, type: 3}
+      propertyPath: SpawnTime
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7940ecf3e2461e4bbc36df143230f2c, type: 3}

@@ -11,6 +11,8 @@ public class BugScript : MonoBehaviour
     public int maxWaterDropped = 5;
     private float? previousAngle = null; //L'angle entre l'insecte et le prochain point a la frame précédente
     public int Life = 1;//Le nombre de clic restant pour le tuer
+    public AudioSource hurtSound;
+    public AudioSource deathSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -104,7 +106,12 @@ public class BugScript : MonoBehaviour
         Life -= 1;
         //Et si on est pas mort, c'est tout
         if (Life > 0)
+        {
+            hurtSound.Stop();
+            hurtSound.Play();
             return;
+        }
+            
         //Sinon, on prepare la mort
         Kill();
     }
@@ -115,6 +122,9 @@ public class BugScript : MonoBehaviour
         gameObject.GetComponentInChildren<ParticleSystem>().Emit(30);
         WaterCanScript.Instance.WaterReserve += Random.Range(minWaterDropped, maxWaterDropped);
         Destroy(gameObject, 0.5f);
+
+        hurtSound.Stop();
+        deathSound.Play();
     }
 
     public IEnumerator DelayedKill(float time)

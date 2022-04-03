@@ -38,6 +38,11 @@ public class PlantList : MonoBehaviour
             if (!plant.IsDead)
                 return;
         }
+        Invoke("LoadScene", 2);
+    }
+
+    void LoadScene()
+    {
         SceneManager.LoadScene(DeathSceneName);
     }
 }
