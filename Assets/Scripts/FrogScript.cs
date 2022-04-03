@@ -27,16 +27,20 @@ public class FrogScript : MonoBehaviour
             return;
         }
 
+        List<BugScript> nextList = new List<BugScript>();
         foreach(BugScript bug in targetList)
         {
-            Eat(bug);
+            bool hasEaten=Eat(bug);
+            if (!hasEaten)
+            {
+                nextList.Add(bug);
+            }
         }
+        targetList = new  List<BugScript>(nextList);
     }
 
-    public void Eat(BugScript target)
-    {
-        Debug.Log("I will try to eat");
-        
+    public bool Eat(BugScript target)
+    {  
         //On vérifie qu'il n'y a aucun obstacle entre les elemnts
         Vector2 fromPosition = transform.position;
         Vector2 toPosition = target.transform.position;
@@ -48,24 +52,34 @@ public class FrogScript : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, layerMask);
 
+        //Debug.DrawRay(transform.position, direction, Color.green, 10, false);
+
         //Si on ne touche pas la cible, y'as eu un bug, on annule tout
         if (hit.collider == null)
-            return;
+        {
+            return false;
+        }
+            
 
         //Si on touche une cible et que c'est pas l'ennemi, c'est qu'un obstacle se trouvais entre les 2
-        if (hit.collider.tag != "Bug")
-            return;
+        if (hit.collider.gameObject != target.gameObject)
+        {
+            return false;
+        }
 
         //On va aussi fire le particle system avec le bon angle
-        particleSystem.transform.eulerAngles = new Vector3(0, 0, Mathf.Rad2Deg*angle-transform.eulerAngles.z);
+        particleSystem.transform.eulerAngles = new Vector3(0, 0, Mathf.Rad2Deg*(angle+Mathf.PI));
         particleSystem.Emit(1);
 
 
         //Sinon, c'est bon, on peut tuer la cible
         var main = particleSystem.main;
         float time = 0; //distance / main.startSpeed.constant;
-        StartCoroutine(target.DelayedKill(time));
-        //cooldown = TimeBetweenEating;
+        //StartCoroutine(target.DelayedKill(time));
+        target.Kill();
+        cooldown = TimeBetweenEating;
+        return true;
+        
     }
 
     void Die()

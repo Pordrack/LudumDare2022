@@ -81,14 +81,18 @@ public class BugScript : MonoBehaviour
             Destroy(gameObject);
             //Et on se suicide
         }
+        //Si on est dans la zone d'une tourelle grenouille, on doit regarder si on se fait tuer
+        if (other.tag == "FrogTurret")
+        {
+            other.gameObject.GetComponentInParent<FrogScript>().targetList.Add(this);
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        //Si on est dans la zone d'une tourelle grenouille, on doit regarder si on se fait tuer
-        if (collision.tag == "FrogTurret")
+        if (other.tag == "FrogTurret")
         {
-            collision.gameObject.GetComponentInParent<FrogScript>().Eat(this);
+            other.gameObject.GetComponentInParent<FrogScript>().targetList.Remove(this);
         }
     }
 
