@@ -22,7 +22,7 @@ public class WaterCanScript : MonoBehaviour
     }
 
     private Vector3 mousePosition;
-    public GameObject particleSystem;
+    public GameObject waterParticleSystem;
 
     public float WaterReserve = 40;
     public float WaterMaxReserve = 100;
@@ -59,14 +59,14 @@ public class WaterCanScript : MonoBehaviour
 
         WaterBarFiller();
 
-        particleSystem.SetActive(Input.GetMouseButton(0) && WaterReserve > 0);
+        waterParticleSystem.SetActive(Input.GetMouseButton(0) && WaterReserve > 0);
         if (!Input.GetMouseButton(0))
             return;
 
         if (WaterReserve <= 0)
             return;
 
-        particleSystem.SetActive(true);
+        waterParticleSystem.SetActive(true);
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up,Mathf.Infinity,layerMask);
 
