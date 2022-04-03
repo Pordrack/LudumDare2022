@@ -37,6 +37,10 @@ public class BugSpawnerScript : MonoBehaviour
     public int minWaterDopped = 3;
     public int maxWaterDropped = 6;
 
+    //Les valeurs de vie des insectes
+    public int minBugLife = 1;
+    public int maxBugLife = 3;
+
     private float spawnTimer;
 
     private void Awake()
@@ -61,6 +65,11 @@ public class BugSpawnerScript : MonoBehaviour
         if (spawnTimer > 0)
             return;
 
+        Spawn();
+    }
+
+    public void Spawn()
+    {
         //On fait spawner un nouveau mob et on lui donne un chemin au pif dans la liste
         GameObject newBug = Object.Instantiate(InsectPrefab);
         BugScript newBugScript = newBug.GetComponent<BugScript>();
@@ -73,7 +82,9 @@ public class BugSpawnerScript : MonoBehaviour
         //}
 
         //Puis on lui donne sa vitesse random
-        newBugScript.Speed+=BugSpeed + Random.Range(-BugSpeedSpread, BugSpeedSpread);
+        newBugScript.Speed += BugSpeed + Random.Range(-BugSpeedSpread, BugSpeedSpread);
+        //Et sa vie random
+        newBugScript.Life = Random.Range(minBugLife, maxBugLife);
         //Et on oublie pas de reset le timer !
         spawnTimer = SpawnTime + Random.Range(-SpawnTimeSpread, SpawnTimeSpread);
         newBugScript.minWaterDropped = minWaterDopped;
