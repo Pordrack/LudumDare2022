@@ -29,6 +29,7 @@ public class WaterCanScript : MonoBehaviour
     public float WaterPerSecond = 5;
     public LayerMask layerMask;
     public Image WaterBar;
+    public bool Active=false; //Est-ce que le joueur veut actuellement utiliser l'arrosoir ?
     float WaterBarY = 1f;
 
     // Start is called before the first frame update
@@ -41,7 +42,12 @@ public class WaterCanScript : MonoBehaviour
     void Update()
     {
         //Debug.Log(WaterReserve + " water left in can");
-
+        //Si l'objet est pas actif, on fait rien
+        if (!Active)
+        {
+            transform.position = new Vector3(100000, 100000, -10000);
+            return;
+        }
         //l'objet suit les mouvements de la souris
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -79,5 +85,11 @@ public class WaterCanScript : MonoBehaviour
     void WaterBarFiller() //remplissage visible de la jauge d'eau
     {
         WaterBar.fillAmount = WaterReserve / WaterMaxReserve;
+    }
+
+    //Permet d'activer/desactiver l'arrosoir, appelé par le bouton quoi
+    public void ChangeWaterCanActivation()
+    {
+        Active = !Active;
     }
 }

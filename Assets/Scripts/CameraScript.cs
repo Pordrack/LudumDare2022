@@ -10,6 +10,21 @@ public class CameraScript : MonoBehaviour
     //l'écart entre la camera et la cible (plante)
     private Vector3 offset;
 
+    private static CameraScript _instance;
+
+    public static CameraScript Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<CameraScript>();
+            }
+
+            return _instance;
+        }
+    }
+
     private void Start()
     {
         target = PlantList.Instance.Plants[0].transform;
