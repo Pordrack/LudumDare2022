@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a28b54874728e46a0433a14a3da716, type: 3}
+  m_Name: Canicule
+  m_EditorClassIdentifier: 
+  AleaName: Heat wave
+  AleaDescription: Prepare yourself for a a heat wave
+  Probability: 1
+  script: {fileID: 3397247118184512590, guid: 2f61337adb2f7c34c9bf51db3b87bbb4, type: 3}
+  BaseMediumTime: 3

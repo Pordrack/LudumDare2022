@@ -10,6 +10,7 @@ public class BugScript : MonoBehaviour
     public int minWaterDropped = 3;
     public int maxWaterDropped = 5;
     private float? previousAngle = null; //L'angle entre l'insecte et le prochain point a la frame précédente
+    public int Life = 1;//Le nombre de clic restant pour le tuer
     // Start is called before the first frame update
     void Start()
     {
@@ -82,9 +83,33 @@ public class BugScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Si on est dans la zone d'une tourelle grenouille, on doit regarder si on se fait tuer
+        if (collision.tag == "FrogTurret")
+        {
+            collision.gameObject.GetComponentInParent<FrogScript>().Eat(this);
+        }
+    }
+
     private void OnMouseDown()
     {
-        Destroy(gameObject);
+        //On emet les particles de blessures
+        gameObject.GetComponentInChildren<ParticleSystem>().Emit(15);
+        //On enleve une vie
+        Life -= 1;
+        //Et si on est pas mort, c'est tout
+        if (Life > 0)
+            return;
+        //Sinon, on prepare la mort
+        Kill();
+    }
+
+    public void Kill()
+    {
+        gameObject.GetComponent<Animator>().SetBool("WillDie", true);
+        gameObject.GetComponentInChildren<ParticleSystem>().Emit(30);
         WaterCanScript.Instance.WaterReserve += Random.Range(minWaterDropped, maxWaterDropped);
+        Destroy(gameObject, 0.5f);
     }
 }

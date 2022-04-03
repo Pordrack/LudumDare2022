@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 //La camera qui peut switcher entre les plantes
 public class CameraScript : MonoBehaviour
@@ -9,6 +10,10 @@ public class CameraScript : MonoBehaviour
     public Transform target = null;
     //l'écart entre la camera et la cible (plante)
     private Vector3 offset;
+
+    //Gére l'activation et desactivation du filtre de chaleur
+    public PostProcessVolume HeatVolume;
+    public float HeatVolumeTargetWeight;
 
     private static CameraScript _instance;
 
@@ -29,6 +34,16 @@ public class CameraScript : MonoBehaviour
     {
         target = PlantList.Instance.Plants[0].transform;
         offset = transform.position - target.position;
+    }
+
+    public void Update()
+    {
+        if (HeatVolume.weight == HeatVolumeTargetWeight)
+        {
+            return;
+        }
+
+        HeatVolume.weight = Mathf.MoveTowards(HeatVolume.weight, HeatVolumeTargetWeight, Time.deltaTime);
     }
 
     public void MoveTarget(int diff)
