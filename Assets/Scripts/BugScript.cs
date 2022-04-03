@@ -112,4 +112,10 @@ public class BugScript : MonoBehaviour
         WaterCanScript.Instance.WaterReserve += Random.Range(minWaterDropped, maxWaterDropped);
         Destroy(gameObject, 0.5f);
     }
+
+    public IEnumerator DelayedKill(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Kill();
+    }
 }
