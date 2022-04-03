@@ -14,6 +14,10 @@ public class SceneSkipper : MonoBehaviour
     void Start()
     {
         cooldown = 0.5f;
+        if (TimeBeforeSkip == 0)
+        {
+            TimeBeforeSkip = float.PositiveInfinity;
+        }
     }
 
     void Update()

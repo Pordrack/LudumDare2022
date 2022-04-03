@@ -33,11 +33,11 @@ public class PlantList : MonoBehaviour
 
     void Update()
     {
-        //foreach(PlantScript plant in Plants)
-        //{
-        //    if (plant.IsDead)
-        //        return;
-        //}
-        //SceneManager.LoadScene(DeathSceneName);
+        foreach(PlantScript plant in Plants)
+        {
+            if (!plant.IsDead)
+                return;
+        }
+        SceneManager.LoadScene(DeathSceneName);
     }
 }

@@ -70,16 +70,15 @@ public class BugSpawnerScript : MonoBehaviour
 
     public void Spawn()
     {
+        //Si toute les plantes sont mortes on arrête
+        if (PathsToFollow.Count <= 0)
+            return;
+
         //On fait spawner un nouveau mob et on lui donne un chemin au pif dans la liste
         GameObject newBug = Object.Instantiate(InsectPrefab);
         BugScript newBugScript = newBug.GetComponent<BugScript>();
-        newBugScript.PathToFollow = PathsToFollow[Random.Range(0, PathsToFollow.Count)];
 
-        //Si la plante est morte on tire un nouveau chemin
-        //while (newBugScript.PathToFollow.GetComponentInParent<PlantScript>().IsDead)
-        //{
-        //    newBugScript.PathToFollow = PathsToFollow[Random.Range(0, PathsToFollow.Count)];
-        //}
+        newBugScript.PathToFollow = PathsToFollow[Random.Range(0, PathsToFollow.Count)];
 
         //Puis on lui donne sa vitesse random
         newBugScript.Speed += BugSpeed + Random.Range(-BugSpeedSpread, BugSpeedSpread);
