@@ -31,13 +31,14 @@ public class PauseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Input.GetButtonDown("Pause"));
         if(Input.GetButtonDown("Pause")){
             if(pauseOn){
                 onContinue();
             }else{
                 OnPause();  
             }
-            //Debug.Log("pauseOn=" + pauseOn.ToString()); 
+            Debug.Log("pauseOn=" + pauseOn.ToString()); 
         }
     }
 

@@ -18,6 +18,9 @@ public class PlantScript : MonoBehaviour
 
     public bool IsDead = false;
 
+    //Les sons de l'arbre
+    public List<AudioSource> DeathSounds;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +44,9 @@ public class PlantScript : MonoBehaviour
         int currentSprite = (int)Mathf.Floor((1-percentage) * (Images.Length));
         //Debug.Log(percentage);
         plantSpriteRenderer.sprite = Images[currentSprite];
-      
+
+        WaterBar.transform.position = new Vector3(transform.position.x, transform.position.y + WaterBarY, transform.position.z);
+
         //On regarde si on doit mourir
         if (WaterLevel <= 0)
         {
@@ -57,8 +62,13 @@ public class PlantScript : MonoBehaviour
 
     public void Die()
     {
+        if (IsDead)
+            return;
         IsDead = true;
         plantSpriteRenderer.sprite = DeathImage;
+        //On joue aussi un son special
+        int randomIndex = Random.Range(0, DeathSounds.Count);
+        DeathSounds[randomIndex].Play();
     }
 
     public void Water(float waterAmount)
