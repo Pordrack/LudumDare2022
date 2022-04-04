@@ -18,8 +18,9 @@ public class BugScript : MonoBehaviour
     {
         Vector2 target = PathToFollow.points[0];
         //On pense a eventuellement flip le bidule
-        target += (Vector2)PathToFollow.transform.position;
         target.x *= PathToFollow.transform.localScale.x;
+        target += (Vector2)PathToFollow.transform.position;
+        
         //On commence par se positionner sur le début du chemin
         transform.position = target;
     }
@@ -34,8 +35,8 @@ public class BugScript : MonoBehaviour
         //On cible le point après le dernier atteint
         Vector2 target = PathToFollow.points[currentPoint + 1];
         //On pense a eventuellement flip le bidule
-        target += (Vector2)PathToFollow.transform.position;
         target.x *= PathToFollow.transform.localScale.x;
+        target += (Vector2)PathToFollow.transform.position;
 
         float angle = Mathf.Atan2(target.y - transform.position.y, target.x - transform.position.x);
         float distFromTarget = Mathf.Sqrt(Mathf.Pow(target.x - transform.position.x, 2) + Mathf.Pow(target.x - transform.position.x, 2));
@@ -121,6 +122,7 @@ public class BugScript : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("WillDie", true);
         gameObject.GetComponentInChildren<ParticleSystem>().Emit(30);
         WaterCanScript.Instance.WaterReserve += Random.Range(minWaterDropped, maxWaterDropped);
+        WaterCanScript.Instance.WaterReserve = Mathf.Clamp(WaterCanScript.Instance.WaterReserve, 0, WaterCanScript.Instance.WaterMaxReserve);
         Destroy(gameObject, 0.5f);
 
         hurtSound.Stop();

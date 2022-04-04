@@ -9,6 +9,8 @@ public class PlantScript : MonoBehaviour
     public float WaterLevel = 10;
     public float MaxWaterLevel = 15;
 
+    public float RessourcesPerSeconds = 3;
+
     public Image WaterBar;
     float WaterBarY = -3;
 
@@ -43,6 +45,10 @@ public class PlantScript : MonoBehaviour
         float percentage = WaterLevel/MaxWaterLevel;
         int currentSprite = (int)Mathf.Floor((1-percentage) * (Images.Length));
         //Debug.Log(percentage);
+        if (currentSprite >= Images.Length)
+        {
+            currentSprite = Images.Length - 1;
+        }
         plantSpriteRenderer.sprite = Images[currentSprite];
 
         WaterBar.transform.position = new Vector3(transform.position.x, transform.position.y + WaterBarY, transform.position.z);
@@ -53,6 +59,8 @@ public class PlantScript : MonoBehaviour
             Die();
             return;
         }
+
+        ShopScript.Instance.Money += Time.deltaTime * RessourcesPerSeconds;
     }
 
     void WaterBarFiller() //remplissage visible de la jauge d'eau
