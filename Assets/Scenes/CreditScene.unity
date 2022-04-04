@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe5dab82c99c8b44a3f7696f5834b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: MenuScript
+  SceneToLoad: MenuScene
   TimeBeforeSkip: 20
   buttonsToSkip:
   - Fire1
@@ -928,7 +928,7 @@ MonoBehaviour:
     -Diriann
 
 
-    Graphisms:
+    Graphics:
 
     -Pendul
 
