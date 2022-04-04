@@ -44,7 +44,9 @@ public class PlantScript : MonoBehaviour
         int currentSprite = (int)Mathf.Floor((1-percentage) * (Images.Length));
         //Debug.Log(percentage);
         plantSpriteRenderer.sprite = Images[currentSprite];
-      
+
+        WaterBar.transform.position = new Vector3(transform.position.x, transform.position.y + WaterBarY, transform.position.z);
+
         //On regarde si on doit mourir
         if (WaterLevel <= 0)
         {
