@@ -188,8 +188,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2098825057842750504, guid: 6850125454ad0e44eb97aae205dd928e, type: 3}
       propertyPath: m_Name
-      value: WaterCan
+      value: WaterCan Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2098825057842750507, guid: 6850125454ad0e44eb97aae205dd928e, type: 3}
+      propertyPath: WaterBar
+      value: 
+      objectReference: {fileID: 4676186244982932270}
+    - target: {fileID: 2098825057842750507, guid: 6850125454ad0e44eb97aae205dd928e, type: 3}
+      propertyPath: waterParticleSystem
+      value: 
+      objectReference: {fileID: 8955362758043137382}
     - target: {fileID: 2098825057842751445, guid: 6850125454ad0e44eb97aae205dd928e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -239,5 +247,10 @@ PrefabInstance:
 --- !u!4 &8955362758358037626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2098825057842751445, guid: 6850125454ad0e44eb97aae205dd928e, type: 3}
+  m_PrefabInstance: {fileID: 7018667321469604783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8955362758043137382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2098825057655252681, guid: 6850125454ad0e44eb97aae205dd928e, type: 3}
   m_PrefabInstance: {fileID: 7018667321469604783}
   m_PrefabAsset: {fileID: 0}

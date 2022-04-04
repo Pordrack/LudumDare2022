@@ -16,4 +16,4 @@ MonoBehaviour:
   AleaDescription: Prepare yourself for a a heat wave
   Probability: 1
   script: {fileID: 3397247118184512590, guid: 2f61337adb2f7c34c9bf51db3b87bbb4, type: 3}
-  BaseMediumTime: 3
+  BaseMediumTime: 30
