@@ -13,6 +13,8 @@ public class BugScript : MonoBehaviour
     public int Life = 1;//Le nombre de clic restant pour le tuer
     public AudioSource hurtSound;
     public AudioSource deathSound;
+
+    public AudioSource[] spawnSounds;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,9 @@ public class BugScript : MonoBehaviour
         
         //On commence par se positionner sur le début du chemin
         transform.position = target;
+
+        int randomIndex = Random.Range(0, spawnSounds.Length);
+        spawnSounds[randomIndex].Play();
     }
 
     // Update is called once per frame

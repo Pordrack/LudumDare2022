@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4473747967516928298, guid: edcf9600deec5ce499b8d64581d46d1a, type: 3}
       propertyPath: m_Name
-      value: TurretPreviz (1)
+      value: TurretPreviz (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4473747967516928298, guid: edcf9600deec5ce499b8d64581d46d1a, type: 3}
       propertyPath: m_IsActive
@@ -18,18 +18,6 @@ PrefabInstance:
     - target: {fileID: 4473747967516928302, guid: edcf9600deec5ce499b8d64581d46d1a, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4473747967516928302, guid: edcf9600deec5ce499b8d64581d46d1a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4473747967516928302, guid: edcf9600deec5ce499b8d64581d46d1a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4473747967516928302, guid: edcf9600deec5ce499b8d64581d46d1a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4473747967516928302, guid: edcf9600deec5ce499b8d64581d46d1a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -46,6 +46,7 @@ public class WaterCanScript : MonoBehaviour
         if (!Active)
         {
             transform.position = new Vector3(100000, 100000, -10000);
+            waterParticleSystem.gameObject.SetActive(false);
             return;
         }
         //l'objet suit les mouvements de la souris
