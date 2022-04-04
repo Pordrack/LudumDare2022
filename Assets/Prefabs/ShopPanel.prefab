@@ -823,7 +823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577323479751661117, guid: 7bad1e59c7b4de146a0b23b2677b1c0a, type: 3}
       propertyPath: m_Text
-      value: 'Water collector
+      value: 'Water Refill
 
 '
       objectReference: {fileID: 0}
