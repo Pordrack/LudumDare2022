@@ -8,19 +8,46 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 98c8f083ca6fccd4badfd2809f279224
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: bdb93577ecec89a49ac70cfc5aeb969b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PordrackScene 1.unity
     guid: 52f9bbdcc2b99974c8370d55b0449d58
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/T_1.unity
     guid: 2ac90e2cc719a094f930324b89394c9a
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: 7f03988f1c42476458f8a45c40a02163
+  - enabled: 1
+    path: Assets/Scenes/Diriann_T_1.unity
+    guid: 42f2e1a858fd7ba448c5dd6530010a11
+  - enabled: 1
+    path: Assets/Scenes/Diriann_T_2.unity
+    guid: 36385d04beeadd8448863718d0258539
+  - enabled: 1
+    path: Assets/Scenes/DiriannScene.unity
+    guid: 174434821e2f6914faeb5c0e26d0bb00
+  - enabled: 1
+    path: Assets/Scenes/DiriannScene_1.unity
+    guid: dd34568fec7a2a547a757589e6cbef68
+  - enabled: 1
+    path: Assets/Scenes/DiriannScene_2.unity
+    guid: 9740873ea260fcb44ba635291121a7ae
+  - enabled: 1
+    path: Assets/Scenes/DiriannScene_3.unity
+    guid: b62495e3d420ee543948f730c856f68b
+  - enabled: 1
+    path: Assets/Scenes/GoodEnding.unity
+    guid: 0ca2b07ca400c4a42a3117c3c864a550
+  - enabled: 0
+    path: Assets/Scenes/NewPordrackScene.unity
+    guid: 85e1c95466631824b871bf32a8ab8972
+  - enabled: 0
+    path: Assets/Scenes/PordrackScene.unity
+    guid: f1e45b3c50484354c8a794bb35130d8a
   m_configObjects: {}
